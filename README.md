@@ -1,1 +1,1 @@
-:space_invader: Guillaume's Pokemon Names Hangman :space_invader:
+:space_invader: Guillaume's Pokemon Hangman :space_invader:
