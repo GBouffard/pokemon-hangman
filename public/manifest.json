@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Guillaume's Pokemon Hangman",
+  "name": "Guillaume's Pokemon Hangman",
   "icons": [
     {
       "src": "favicon.ico",
