@@ -1,7 +1,7 @@
 import pokemonList from "../constants/game-constants";
 import _ from 'lodash';
 
-const replaceLetter = (letter) => gameLogic.guessedLetters.includes(letter) ? letter : '_'
+const replaceLetter = (letter) => gameLogic.givenLetters.includes(letter) ? letter : '_'
 
 const mappedGuess = (chosenName) => {
   const splitName = chosenName.split('');
@@ -12,15 +12,18 @@ const mappedGuess = (chosenName) => {
 
 const gameLogic = {
   lives: 6,
-  guessedLetters: [],
+  givenLetters: [],
 
   guess: (chosenName) => mappedGuess(chosenName),
 
   choseRandomPokemonName: () => _.sample(pokemonList),
 
-  isCorrect: (letter) => gameLogic.guessedLetters.push(letter),
+  isCorrect: (letter) => gameLogic.givenLetters.push(letter),
 
-  isIncorrect: (letter) => gameLogic.lives--,
+  isIncorrect: (letter) => {
+    gameLogic.givenLetters.push(letter);
+    gameLogic.lives--;
+  },
 
   choseLetter: (chosenName, letter) => chosenName.includes(letter) ? gameLogic.isCorrect(letter) : gameLogic.isIncorrect(letter)
 };
