@@ -116,7 +116,9 @@ describe("Game logic - ", () => {
       expect(gameLogic.lives).toEqual(6);
     });
 
-    xit("Should re-initialize the array of choices to an empty array", () => { });
+    it("Should re-initialize the array of choices to an empty array", () => {
+      expect(gameLogic.choices).toEqual([]);
+    });
 
     xit("Should re-initialize the state representation of the guessed word with underscores for each letter", () => { });
 
