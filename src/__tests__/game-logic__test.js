@@ -12,7 +12,12 @@ describe("Game logic - ", () => {
       expect(gameLogic.lives).toEqual(6);
     });
 
-    xit("Should Know the state representation of the guessed word with underscores for each letter", () => { });
+    it("Should know the state representation of the guessed word with underscores for each letter", () => {
+      const chosenName = gameLogic.choseRandomPokemonName();
+      const mockChosenNameGuess = chosenName.replace(/\D/g, '_');
+
+      expect(gameLogic.guess(chosenName)).toEqual(mockChosenNameGuess);
+    });
   });
 
   describe("During a game - ", () => {
