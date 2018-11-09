@@ -5,10 +5,12 @@ describe("Game logic - ", () => {
   describe("When a game starts / At initial state - ", () => {
     it("Should choose a random name within the list of first generation pokemon names", () => {
       const chosenName = gameLogic.choseRandomPokemonName();
-      expect(pokemonList).toEqual(expect.arrayContaining([chosenName]))
+      expect(pokemonList).toEqual(expect.arrayContaining([chosenName]));
     });
 
-    xit("Should start with an initial number of 6 lives", () => { });
+    it("Should start with an initial number of 6 lives", () => {
+      expect(gameLogic.lives).toEqual(6);
+    });
 
     xit("Should Know the state representation of the guessed word with underscores for each letter", () => { });
   });
