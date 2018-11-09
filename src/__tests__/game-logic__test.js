@@ -125,7 +125,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.choices).not.toEqual(expect.arrayContaining(['G', 'U', 'I', 'L', 'A', 'M', 'E', 'C', 'H']));
       });
 
-      xit("Should have a visual progress of the name to guess that differs from the chosen Pokemon name", () => { });
+      it("Should have a visual progress of the name to guess that differs from the chosen Pokemon name", () => {
+        expect(gameLogic.visualProgress(chosenName)).not.toEqual('GUILLAUMECHU');
+      });
 
       xit("Should know that the game is over", () => { });
 
