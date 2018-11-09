@@ -20,7 +20,9 @@ const gameLogic = {
 
   isCorrect: (letter) => gameLogic.guessedLetters.push(letter),
 
-  choseLetter: (chosenName, letter) => chosenName.includes(letter) ? gameLogic.isCorrect(letter) : null
+  isIncorrect: (letter) => true,
+
+  choseLetter: (chosenName, letter) => chosenName.includes(letter) ? gameLogic.isCorrect(letter) : gameLogic.isIncorrect(letter)
 };
 
 export default gameLogic;
