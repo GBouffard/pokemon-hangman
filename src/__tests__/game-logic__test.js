@@ -12,8 +12,8 @@ describe("Game logic - ", () => {
       expect(gameLogic.lives).toEqual(6);
     });
 
-    it("Should start with an empty array of given letters", () => {
-      expect(gameLogic.givenLetters).toEqual([]);
+    it("Should start with an empty array of choices", () => {
+      expect(gameLogic.choices).toEqual([]);
     });
 
     it("Should know the state representation of the guessed word with underscores for each letter", () => {
@@ -45,8 +45,8 @@ describe("Game logic - ", () => {
         expect(gameLogic.lives).toEqual(6);
       });
 
-      it("Should add the letter to the array of given letters", () => {
-        expect(gameLogic.givenLetters).toEqual(['L']);
+      it("Should add the letter to the array of choices", () => {
+        expect(gameLogic.choices).toEqual(['L']);
       });
 
       it("Should know the new state representation of the guessed word with correct replacements", () => {
@@ -69,8 +69,8 @@ describe("Game logic - ", () => {
         expect(gameLogic.lives).toEqual(5);
       });
 
-      it("Should add the letter to the array of given letters", () => {
-        expect(gameLogic.givenLetters).toEqual(['L', 'Z']);
+      it("Should add the letter to the array of choices", () => {
+        expect(gameLogic.choices).toEqual(['L', 'Z']);
       });
 
       it("Should not update the state representation of the guessed word", () => {
@@ -87,7 +87,7 @@ describe("Game logic - ", () => {
     describe("When the player won the game - ", () => {
       xit("Should still has life/lives left", () => { });
 
-      xit("Should have all the letters from the chosen name in the array of given letters", () => { });
+      xit("Should have all the letters from the chosen name in the array of choices", () => { });
 
       xit("Should have a state representation of the guessed word equal to the chosen Pokemon name", () => { });
 
@@ -97,7 +97,7 @@ describe("Game logic - ", () => {
     describe("When the player lost the game - ", () => {
       xit("Should have no life left", () => { });
 
-      xit("Should not have all the letters from the chosen name in the array of given letters", () => { });
+      xit("Should not have all the letters from the chosen name in the array of choices", () => { });
 
       xit("Should have a state representation of the guessed word that differs from the chosen Pokemon name", () => { });
 
@@ -106,11 +106,17 @@ describe("Game logic - ", () => {
   });
 
   describe("When a brand new game starts - ", () => {
+    beforeAll(() => {
+      gameLogic.reStart();
+    });
+
     xit("Should choose a new random name within the list of first generation pokemon names", () => { });
 
-    xit("Should re-initialize the number of lives to 6", () => { });
+    it("Should re-initialize the number of lives to 6", () => {
+      expect(gameLogic.lives).toEqual(6);
+    });
 
-    xit("Should re-initialize the array of given letters to an empty array", () => { });
+    xit("Should re-initialize the array of choices to an empty array", () => { });
 
     xit("Should re-initialize the state representation of the guessed word with underscores for each letter", () => { });
 
