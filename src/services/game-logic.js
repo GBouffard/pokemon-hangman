@@ -7,7 +7,8 @@ const gameLogic = {
   lives: 6,
   guessedLetters: [],
   guess: (chosenName) => mappedGuess(chosenName),
-  choseRandomPokemonName: () => _.sample(pokemonList)
+  choseRandomPokemonName: () => _.sample(pokemonList),
+  choseLetter: (chosenName, letter) => chosenName.includes(letter)
 };
 
 export default gameLogic;

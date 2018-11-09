@@ -26,7 +26,10 @@ describe("Game logic - ", () => {
 
   describe("During a game - ", () => {
     describe("On a correct letter selection - ", () => {
-      xit("Should know that the chosen letter is correct", () => { });
+      it("Should know that the chosen letter is correct", () => {
+        const chosenName = 'GUILLAUMECHU';
+        expect(gameLogic.choseLetter(chosenName, 'L')).toBe(true);
+      });
 
       xit("Should not update the number of lives left", () => { });
 
