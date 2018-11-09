@@ -41,7 +41,11 @@ const gameLogic = {
     gameLogic.choices = [];
   },
 
-  isGameOver: (chosenName) => chosenName === gameLogic.visualProgress(chosenName)
+  isGameOver: (chosenName) => chosenName === gameLogic.visualProgress(chosenName),
+
+  result: (chosenName) => {
+    if (gameLogic.isGameOver(chosenName)) { return 'You won!'; }
+  }
 };
 
 export default gameLogic;

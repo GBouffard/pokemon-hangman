@@ -106,7 +106,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.isGameOver(chosenName)).toBe(true);
       });
 
-      xit("Should know that the player won", () => { });
+      it("Should know that the player won", () => {
+        expect(gameLogic.result(chosenName)).toEqual('You won!');
+      });
     });
 
     describe("When the player lost the game - ", () => {
