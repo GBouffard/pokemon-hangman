@@ -112,13 +112,20 @@ describe("Game logic - ", () => {
     });
 
     describe("When the player lost the game - ", () => {
-      xit("Should have no life left", () => { });
+      beforeAll(() => {
+        gameLogic.reStart();
+        ['G', 'U', 'R', 'S', 'T', 'X', 'Y', 'Z'].forEach(letter => gameLogic.choseLetter(chosenName, letter));
+      });
+
+      it("Should have no life left", () => {
+        expect(gameLogic.lives).toEqual(0);
+      });
 
       xit("Should not have all the letters from the chosen name in the array of choices", () => { });
 
       xit("Should have a visual progress of the name to guess that differs from the chosen Pokemon name", () => { });
 
-      it("Should know that the game is over", () => { });
+      xit("Should know that the game is over", () => { });
 
       xit("Should know that the player lost", () => { });
     });
