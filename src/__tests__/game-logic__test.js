@@ -107,7 +107,7 @@ describe("Game logic - ", () => {
       });
 
       it("Should know that the player won", () => {
-        expect(gameLogic.result(chosenName)).toEqual('You won!');
+        expect(gameLogic.isWon(chosenName)).toBe(true);
       });
     });
 
@@ -133,7 +133,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.isGameOver(chosenName)).toBe(true);
       });
 
-      xit("Should know that the player lost", () => { });
+      it("Should know that the player lost", () => {
+        expect(gameLogic.isLost(chosenName)).toBe(true);
+      });
     });
   });
 
