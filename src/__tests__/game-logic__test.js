@@ -102,6 +102,10 @@ describe("Game logic - ", () => {
         expect(gameLogic.visualProgress(chosenName)).toEqual('GUILLAUMECHU');
       });
 
+      it("Should know that the game is over", () => {
+        expect(gameLogic.isGameOver(chosenName)).toBe(true);
+      });
+
       xit("Should know that the player won", () => { });
     });
 
@@ -111,6 +115,8 @@ describe("Game logic - ", () => {
       xit("Should not have all the letters from the chosen name in the array of choices", () => { });
 
       xit("Should have a visual progress of the name to guess that differs from the chosen Pokemon name", () => { });
+
+      it("Should know that the game is over", () => { });
 
       xit("Should know that the player lost", () => { });
     });

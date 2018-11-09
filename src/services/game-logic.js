@@ -39,7 +39,9 @@ const gameLogic = {
   reStart: () => {
     gameLogic.lives = 6;
     gameLogic.choices = [];
-  }
+  },
+
+  isGameOver: (chosenName) => chosenName === gameLogic.visualProgress(chosenName)
 };
 
 export default gameLogic;
