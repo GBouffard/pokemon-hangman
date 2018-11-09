@@ -17,11 +17,11 @@ describe("Game logic - ", () => {
       expect(gameLogic.choices).toEqual([]);
     });
 
-    it("Should know the state representation of the guessed word with underscores for each letter", () => {
+    it("Should have the visual progress of the name to guess with underscores for each letter", () => {
       chosenName = gameLogic.choseRandomPokemonName();
       const mockChosenNameGuess = chosenName.replace(/\D/g, '_');
 
-      expect(gameLogic.guess(chosenName)).toEqual(mockChosenNameGuess);
+      expect(gameLogic.visualProgress(chosenName)).toEqual(mockChosenNameGuess);
     });
   });
 
@@ -49,8 +49,8 @@ describe("Game logic - ", () => {
         expect(gameLogic.choices).toEqual(['L']);
       });
 
-      it("Should know the new state representation of the guessed word with correct replacements", () => {
-        expect(gameLogic.guess(chosenName)).toEqual('___LL_______');
+      it("Should know the new visual progress of the name to guess with correct replacements", () => {
+        expect(gameLogic.visualProgress(chosenName)).toEqual('___LL_______');
       });
     });
 
@@ -73,8 +73,8 @@ describe("Game logic - ", () => {
         expect(gameLogic.choices).toEqual(['L', 'Z']);
       });
 
-      it("Should not update the state representation of the guessed word", () => {
-        expect(gameLogic.guess(chosenName)).toEqual('___LL_______');
+      it("Should not update the visual progress of the name to guess", () => {
+        expect(gameLogic.visualProgress(chosenName)).toEqual('___LL_______');
       });
     });
 
@@ -98,7 +98,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.choices).toEqual(expect.arrayContaining(['G', 'U', 'I', 'L', 'A', 'M', 'E', 'C', 'H']));
       });
 
-      xit("Should have a state representation of the guessed word equal to the chosen Pokemon name", () => { });
+      it("Should have a visual progress of the name to guess equal to the chosen Pokemon name", () => {
+        expect(gameLogic.visualProgress(chosenName)).toEqual('GUILLAUMECHU');
+      });
 
       xit("Should know that the player won", () => { });
     });
@@ -108,7 +110,7 @@ describe("Game logic - ", () => {
 
       xit("Should not have all the letters from the chosen name in the array of choices", () => { });
 
-      xit("Should have a state representation of the guessed word that differs from the chosen Pokemon name", () => { });
+      xit("Should have a visual progress of the name to guess that differs from the chosen Pokemon name", () => { });
 
       xit("Should know that the player lost", () => { });
     });
@@ -129,7 +131,7 @@ describe("Game logic - ", () => {
       expect(gameLogic.choices).toEqual([]);
     });
 
-    xit("Should re-initialize the state representation of the guessed word with underscores for each letter", () => { });
+    xit("Should re-initialize the visual progress of the name to guess with underscores for each letter", () => { });
 
     xit("Should know that the game is not finished anymore (that the player has not won or lost anymore)", () => { });
   });

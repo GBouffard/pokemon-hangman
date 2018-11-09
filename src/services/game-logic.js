@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 const replaceLetter = (letter) => gameLogic.choices.includes(letter) ? letter : '_'
 
-const mappedGuess = (chosenName) => {
+const mappedProgress = (chosenName) => {
   const splitName = chosenName.split('');
   const mappedName = splitName.map(letter => replaceLetter(letter));
   const joinedName = mappedName.join().replace(/,/g, '');
@@ -20,7 +20,7 @@ const gameLogic = {
   lives: 6,
   choices: [],
 
-  guess: (chosenName) => mappedGuess(chosenName),
+  visualProgress: (chosenName) => mappedProgress(chosenName),
 
   choseRandomPokemonName: () => _.sample(pokemonList),
 
