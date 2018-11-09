@@ -2,9 +2,10 @@ import gameLogic from "../services/game-logic";
 import pokemonList from "../constants/game-constants";
 
 describe("Game logic - ", () => {
+  let chosenName;
   describe("When a game starts / At initial state - ", () => {
     it("Should choose a random name within the list of first generation pokemon names", () => {
-      const chosenName = gameLogic.choseRandomPokemonName();
+      chosenName = gameLogic.choseRandomPokemonName();
       expect(pokemonList).toEqual(expect.arrayContaining([chosenName]));
     });
 
@@ -17,7 +18,7 @@ describe("Game logic - ", () => {
     });
 
     it("Should know the state representation of the guessed word with underscores for each letter", () => {
-      const chosenName = gameLogic.choseRandomPokemonName();
+      chosenName = gameLogic.choseRandomPokemonName();
       const mockChosenNameGuess = chosenName.replace(/\D/g, '_');
 
       expect(gameLogic.guess(chosenName)).toEqual(mockChosenNameGuess);
@@ -25,7 +26,6 @@ describe("Game logic - ", () => {
   });
 
   describe("During a game - ", () => {
-    let chosenName;
     beforeAll(() => {
       chosenName = 'GUILLAUMECHU';
     });
@@ -85,7 +85,14 @@ describe("Game logic - ", () => {
 
   describe("When a game finishes - ", () => {
     describe("When the player won the game - ", () => {
-      xit("Should still has life/lives left", () => { });
+      beforeAll(() => {
+        gameLogic.reStart();
+        ['G', 'U', 'I', 'L', 'A', 'M', 'E', 'C', 'X', 'Y', 'Z', 'H'].forEach(letter => gameLogic.choseLetter(chosenName, letter));
+      });
+
+      it("Should still has life/lives left", () => {
+        expect(gameLogic.lives).toBeGreaterThan(0);
+      });
 
       xit("Should have all the letters from the chosen name in the array of choices", () => { });
 
