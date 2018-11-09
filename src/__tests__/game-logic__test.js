@@ -129,7 +129,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.visualProgress(chosenName)).not.toEqual('GUILLAUMECHU');
       });
 
-      xit("Should know that the game is over", () => { });
+      it("Should know that the game is over", () => {
+        expect(gameLogic.isGameOver(chosenName)).toBe(true);
+      });
 
       xit("Should know that the player lost", () => { });
     });
