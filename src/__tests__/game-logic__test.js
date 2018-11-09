@@ -121,7 +121,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.lives).toEqual(0);
       });
 
-      xit("Should not have all the letters from the chosen name in the array of choices", () => { });
+      it("Should not have all the letters from the chosen name in the array of choices", () => {
+        expect(gameLogic.choices).not.toEqual(expect.arrayContaining(['G', 'U', 'I', 'L', 'A', 'M', 'E', 'C', 'H']));
+      });
 
       xit("Should have a visual progress of the name to guess that differs from the chosen Pokemon name", () => { });
 
