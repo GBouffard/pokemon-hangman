@@ -65,7 +65,9 @@ describe("Game logic - ", () => {
         expect(isIncorrectSpy).toHaveBeenCalled();
       });
 
-      xit("Should update the number of lives left by removing one", () => { });
+      it("Should update the number of lives left by removing one", () => {
+        expect(gameLogic.lives).toEqual(5);
+      });
 
       xit("Should not add the letter to the array of guessed letters", () => { });
 
