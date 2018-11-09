@@ -31,10 +31,10 @@ describe("Game logic - ", () => {
       beforeAll(() => {
         chosenName = 'GUILLAUMECHU';
         isCorrestSpy = jest.spyOn(gameLogic, 'isCorrect');
+        gameLogic.choseLetter(chosenName, 'L');
       });
 
       it("Should know that the chosen letter is correct", () => {
-        gameLogic.choseLetter(chosenName, 'L');
         expect(isCorrestSpy).toHaveBeenCalled();
       });
 
@@ -42,7 +42,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.lives).toEqual(6);
       });
 
-      xit("Should add the letter to the array of guessed letters", () => { });
+      it("Should add the letter to the array of guessed letters", () => {
+        expect(gameLogic.guessedLetters).toEqual(['L']);
+      });
 
       xit("Should know the new state representation of the guessed word with correct replacements", () => { });
     });

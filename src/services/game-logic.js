@@ -11,9 +11,9 @@ const gameLogic = {
 
   choseRandomPokemonName: () => _.sample(pokemonList),
 
-  isCorrect: (chosenName, letter) => true,
+  isCorrect: (letter) => gameLogic.guessedLetters.push(letter),
 
-  choseLetter: (chosenName, letter) => chosenName.includes(letter) ? gameLogic.isCorrect(chosenName, letter) : null
+  choseLetter: (chosenName, letter) => chosenName.includes(letter) ? gameLogic.isCorrect(letter) : null
 };
 
 export default gameLogic;
