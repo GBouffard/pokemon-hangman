@@ -78,7 +78,9 @@ describe("Game logic - ", () => {
       });
     });
 
-    xit("Should not allow to select a letter twice", () => { });
+    it("Should not allow to select a letter twice", () => {
+      expect(() => gameLogic.choseLetter(chosenName, 'L')).toThrow(new Error('This letter was already chosen!'));
+    });
   });
 
   describe("When a game finishes - ", () => {

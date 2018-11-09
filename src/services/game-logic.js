@@ -10,6 +10,12 @@ const mappedGuess = (chosenName) => {
   return joinedName;
 };
 
+const handleDuplicateChoice = (choices, letter) => {
+  if (choices.includes(letter)) {
+    throw new Error('This letter was already chosen!');
+  }
+}
+
 const gameLogic = {
   lives: 6,
   givenLetters: [],
@@ -25,7 +31,10 @@ const gameLogic = {
     gameLogic.lives--;
   },
 
-  choseLetter: (chosenName, letter) => chosenName.includes(letter) ? gameLogic.isCorrect(letter) : gameLogic.isIncorrect(letter)
+  choseLetter: (chosenName, letter) => {
+    handleDuplicateChoice(gameLogic.givenLetters, letter);
+    chosenName.includes(letter) ? gameLogic.isCorrect(letter) : gameLogic.isIncorrect(letter);
+  }
 };
 
 export default gameLogic;
