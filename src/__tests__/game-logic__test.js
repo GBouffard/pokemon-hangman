@@ -26,12 +26,21 @@ describe("Game logic - ", () => {
 
   describe("During a game - ", () => {
     describe("On a correct letter selection - ", () => {
-      it("Should know that the chosen letter is correct", () => {
-        const chosenName = 'GUILLAUMECHU';
-        expect(gameLogic.choseLetter(chosenName, 'L')).toBe(true);
+      let chosenName;
+      let isCorrestSpy;
+      beforeAll(() => {
+        chosenName = 'GUILLAUMECHU';
+        isCorrestSpy = jest.spyOn(gameLogic, 'isCorrect');
       });
 
-      xit("Should not update the number of lives left", () => { });
+      it("Should know that the chosen letter is correct", () => {
+        gameLogic.choseLetter(chosenName, 'L');
+        expect(isCorrestSpy).toHaveBeenCalled();
+      });
+
+      it("Should not update the number of lives left", () => {
+        expect(gameLogic.lives).toEqual(6);
+      });
 
       xit("Should add the letter to the array of guessed letters", () => { });
 

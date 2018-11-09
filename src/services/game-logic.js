@@ -6,9 +6,14 @@ const mappedGuess = (chosenName) => chosenName.split('').map(letter => '_').join
 const gameLogic = {
   lives: 6,
   guessedLetters: [],
+
   guess: (chosenName) => mappedGuess(chosenName),
+
   choseRandomPokemonName: () => _.sample(pokemonList),
-  choseLetter: (chosenName, letter) => chosenName.includes(letter)
+
+  isCorrect: (chosenName, letter) => true,
+
+  choseLetter: (chosenName, letter) => chosenName.includes(letter) ? gameLogic.isCorrect(chosenName, letter) : null
 };
 
 export default gameLogic;
