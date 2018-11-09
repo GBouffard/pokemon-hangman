@@ -12,6 +12,10 @@ describe("Game logic - ", () => {
       expect(gameLogic.lives).toEqual(6);
     });
 
+    it("Should start with an empty array of guessed letters", () => {
+      expect(gameLogic.guessedLetters).toEqual([]);
+    });
+
     it("Should know the state representation of the guessed word with underscores for each letter", () => {
       const chosenName = gameLogic.choseRandomPokemonName();
       const mockChosenNameGuess = chosenName.replace(/\D/g, '_');
@@ -26,6 +30,8 @@ describe("Game logic - ", () => {
 
       xit("Should not update the number of lives left", () => { });
 
+      xit("Should add the letter to the array of guessed letters", () => { });
+
       xit("Should know the new state representation of the guessed word with correct replacements", () => { });
     });
 
@@ -33,6 +39,8 @@ describe("Game logic - ", () => {
       xit("Should know that the chosen letter is incorrect", () => { });
 
       xit("Should update the number of lives left by removing one", () => { });
+
+      xit("Should not add the letter to the array of guessed letters", () => { });
 
       xit("Should not update the state representation of the guessed word", () => { });
     });
@@ -44,6 +52,8 @@ describe("Game logic - ", () => {
     describe("When the player won the game - ", () => {
       xit("Should still has life/lives left", () => { });
 
+      xit("Should have all the letters from the chosen name in the array of guessed letters", () => { });
+
       xit("Should have a state representation of the guessed word equal to the chosen Pokemon name", () => { });
 
       xit("Should know that the player won", () => { });
@@ -51,6 +61,8 @@ describe("Game logic - ", () => {
 
     describe("When the player lost the game - ", () => {
       xit("Should have no life left", () => { });
+
+      xit("Should not have all the letters from the chosen name in the array of guessed letters", () => { });
 
       xit("Should have a state representation of the guessed word that differs from the chosen Pokemon name", () => { });
 
@@ -62,6 +74,8 @@ describe("Game logic - ", () => {
     xit("Should choose a new random name within the list of first generation pokemon names", () => { });
 
     xit("Should re-initialize the number of lives to 6", () => { });
+
+    xit("Should re-initialize the array of guessed letters to an empty array", () => { });
 
     xit("Should re-initialize the state representation of the guessed word with underscores for each letter", () => { });
 
