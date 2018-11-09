@@ -73,7 +73,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.givenLetters).toEqual(['L', 'Z']);
       });
 
-      xit("Should not update the state representation of the guessed word", () => { });
+      it("Should not update the state representation of the guessed word", () => {
+        expect(gameLogic.guess(chosenName)).toEqual('___LL_______');
+      });
     });
 
     xit("Should not allow to select a letter twice", () => { });
