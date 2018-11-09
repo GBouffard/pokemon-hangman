@@ -1,7 +1,14 @@
 import pokemonList from "../constants/game-constants";
 import _ from 'lodash';
 
-const mappedGuess = (chosenName) => chosenName.split('').map(letter => '_').join().replace(/,/g, '');
+const replaceLetter = (letter) => gameLogic.guessedLetters.includes(letter) ? letter : '_'
+
+const mappedGuess = (chosenName) => {
+  const splitName = chosenName.split('');
+  const mappedName = splitName.map(letter => replaceLetter(letter));
+  const joinedName = mappedName.join().replace(/,/g, '');
+  return joinedName;
+};
 
 const gameLogic = {
   lives: 6,

@@ -46,7 +46,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.guessedLetters).toEqual(['L']);
       });
 
-      xit("Should know the new state representation of the guessed word with correct replacements", () => { });
+      it("Should know the new state representation of the guessed word with correct replacements", () => {
+        expect(gameLogic.guess(chosenName)).toEqual('___LL_______');
+      });
     });
 
     describe("On an incorrect letter selection - ", () => {
