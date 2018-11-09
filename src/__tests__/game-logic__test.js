@@ -94,7 +94,9 @@ describe("Game logic - ", () => {
         expect(gameLogic.lives).toBeGreaterThan(0);
       });
 
-      xit("Should have all the letters from the chosen name in the array of choices", () => { });
+      it("Should have all the letters from the chosen name in the array of choices", () => {
+        expect(gameLogic.choices).toEqual(expect.arrayContaining(['G', 'U', 'I', 'L', 'A', 'M', 'E', 'C', 'H']));
+      });
 
       xit("Should have a state representation of the guessed word equal to the chosen Pokemon name", () => { });
 
