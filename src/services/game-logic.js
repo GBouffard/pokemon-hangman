@@ -20,7 +20,7 @@ const gameLogic = {
   lives: 6,
   choices: [],
 
-  visualProgress: (chosenName) => mappedProgress(chosenName),
+  visualProgress: (name) => mappedProgress(name),
 
   choseRandomPokemonName: () => _.sample(pokemonList),
 
@@ -31,9 +31,9 @@ const gameLogic = {
     gameLogic.lives--;
   },
 
-  choseLetter: (chosenName, letter) => {
+  choseLetter: (name, letter) => {
     handleDuplicateChoice(gameLogic.choices, letter);
-    chosenName.includes(letter) ? gameLogic.isCorrect(letter) : gameLogic.isIncorrect(letter);
+    name.includes(letter) ? gameLogic.isCorrect(letter) : gameLogic.isIncorrect(letter);
   },
 
   reStart: () => {
@@ -41,11 +41,11 @@ const gameLogic = {
     gameLogic.choices = [];
   },
 
-  isWon: (chosenName) => chosenName === gameLogic.visualProgress(chosenName),
+  isWon: (name) => name === gameLogic.visualProgress(name),
 
-  isLost: (chosenName) => gameLogic.lives === 0,
+  isLost: (name) => gameLogic.lives === 0,
 
-  isGameOver: (chosenName) => gameLogic.isWon(chosenName) || gameLogic.isLost(chosenName)
+  isGameOver: (name) => gameLogic.isWon(name) || gameLogic.isLost(name)
 };
 
 export default gameLogic;

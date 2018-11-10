@@ -9,6 +9,10 @@ describe("Game logic - ", () => {
       expect(pokemonList).toEqual(expect.arrayContaining([chosenName]));
     });
 
+    it("Should know that the game is not over by default", () => {
+      expect(gameLogic.isGameOver(chosenName)).toBe(false);
+    });
+
     it("Should start with an initial number of 6 lives", () => {
       expect(gameLogic.lives).toEqual(6);
     });
@@ -141,10 +145,9 @@ describe("Game logic - ", () => {
 
   describe("When a brand new game starts - ", () => {
     beforeAll(() => {
+      chosenName = gameLogic.choseRandomPokemonName();
       gameLogic.reStart();
     });
-
-    xit("Should choose a new random name within the list of first generation pokemon names", () => { });
 
     it("Should re-initialize the number of lives to 6", () => {
       expect(gameLogic.lives).toEqual(6);
@@ -154,8 +157,8 @@ describe("Game logic - ", () => {
       expect(gameLogic.choices).toEqual([]);
     });
 
-    xit("Should re-initialize the visual progress of the name to guess with underscores for each letter", () => { });
-
-    xit("Should know that the game is not finished anymore (that the player has not won or lost anymore)", () => { });
+    it("Should know that the game is not over anymore", () => {
+      expect(gameLogic.isGameOver(chosenName)).toBe(false);
+    });
   });
 });
