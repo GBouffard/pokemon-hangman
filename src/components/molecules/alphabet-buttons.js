@@ -4,13 +4,14 @@ import Button from '../atoms/button';
 
 const Buttons = () => alphabetLetters.map(letter => (
   <Button
+    className="App__alphabet-letter-button"
     key={letter}
     children={letter}
     onClick={() => { console.log(letter); }} />
 ));
 
 const AlphabetButtons = () => (
-  <div>
+  <div className="App__alphabet-letter-container">
     <Buttons />
   </div>
 );

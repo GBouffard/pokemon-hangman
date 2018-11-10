@@ -52,3 +52,25 @@
   background: linear-gradient(lightcyan 0%, darkblue 100%);
   border: 3px solid darkblue;
 }
+
+.App__alphabet-letter-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  background-image: radial-gradient(lightcyan, lightblue, deepskyblue);
+  border: 3px solid black;
+}
+
+.App__alphabet-letter-button:hover {
+  background-image: radial-gradient(white, lightgoldenrodyellow, yellow);
+}
+
+.App__alphabet-letter-container {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 15px;
+  width: 500px;
+  margin: 25px auto;
+}
