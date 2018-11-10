@@ -4,6 +4,7 @@ import StatusImage from './components/atoms/status-image';
 import NumberOfLives from './components/atoms/number-of-lives';
 import NameProgress from './components/atoms/name-progress';
 import AlphabetButtons from './components/molecules/alphabet-buttons';
+import NewGameButton from './components/atoms/new-game-button';
 import "./App.css";
 
 class App extends Component {
@@ -11,13 +12,15 @@ class App extends Component {
     return (
       <div className="App">
         <GameLogo />
-        <StatusImage
-          status='playing' />
         <NumberOfLives
           lives={6} />
+        <StatusImage
+          status='playing' />
         <NameProgress
           progress="_progress_" />
         <AlphabetButtons />
+        <NewGameButton
+          onClick={() => { console.log('Will start a new game') }} />
       </div>
     );
   }

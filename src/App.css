@@ -17,7 +17,7 @@
 
 .App__lives {
   position: absolute;
-  margin-right: 15px;
+  margin: 15px;
   right: 0;
 }
 
@@ -30,4 +30,25 @@
   width: 500px;
   border: 5px solid darkblue;
   border-radius: 15px;
+}
+
+.App__new-game-button {
+  width: 250px;
+  margin: 10px auto;
+  padding: 8px 18px;
+  color: lightgoldenrodyellow;
+  background: lightblue;
+  background: linear-gradient(lightblue 0%, blue 100%);
+  border: 3px solid blue;
+  border-radius: 50px;
+  font-family: monospace;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.App__new-game-button:hover {
+  color: yellow;
+  background: lightcyan;
+  background: linear-gradient(lightcyan 0%, darkblue 100%);
+  border: 3px solid darkblue;
 }
