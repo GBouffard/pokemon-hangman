@@ -1,4 +1,4 @@
-import pokemonList from "../constants/game-constants";
+import { pokemonList } from "../constants/game-constants";
 import _ from 'lodash';
 
 const replaceLetter = (letter) => gameLogic.choices.includes(letter) ? letter : '_'

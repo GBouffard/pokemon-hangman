@@ -1,5 +1,5 @@
 import gameLogic from "../services/game-logic";
-import pokemonList from "../constants/game-constants";
+import { pokemonList } from "../constants/game-constants";
 
 describe("Game logic - ", () => {
   let chosenName;
