@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GameLogo from './components/atoms/game-logo';
+import StatusImage from './components/atoms/status-image';
 import NumberOfLives from './components/atoms/number-of-lives';
 import NameProgress from './components/atoms/name-progress';
 import AlphabetButtons from './components/molecules/alphabet-buttons';
@@ -10,7 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <GameLogo />
-        <div>image placeholder</div>
+        <StatusImage
+          status='playing' />
         <NumberOfLives
           lives={6} />
         <NameProgress

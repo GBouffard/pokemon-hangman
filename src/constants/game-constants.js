@@ -184,7 +184,14 @@ const alphabetLetters = [
   'Z'
 ];
 
+const statusImages = {
+  playing: 'gottaCatchEmAll',
+  won: 'happy-pikachu',
+  lost: 'sad-pikachu'
+};
+
 export {
   pokemonList,
-  alphabetLetters
+  alphabetLetters,
+  statusImages
 };
