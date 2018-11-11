@@ -18,8 +18,7 @@ class App extends Component {
           <NumberOfLives />
           <StatusImage
             status='playing' />
-          <NameProgress
-            progress="_progress_" />
+          <NameProgress />
           <AlphabetButtons />
           <NewGameButton
             onClick={() => { console.log('Will start a new game') }} />
