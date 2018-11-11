@@ -37,9 +37,9 @@ const reducer = (state = initialState, action) => {
 
     case ACTIONS.CHOSE_LETTER:
       const choicesArray = choseLetter(state.name, action.payload);
-      const updateProgress = visualProgress(state.name);
       const isGameWon = isWon(state.name);
       const isGameLost = isLost(state.name);
+      const updateProgress = isGameLost ? state.name : visualProgress(state.name);
       const newImageStatus = () => {
         if (isGameWon) return 'won';
         if (isGameLost) return 'lost';
