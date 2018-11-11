@@ -1,6 +1,11 @@
 import ACTIONS from "../constants/action-types";
 import gameLogic from "../services/game-logic";
 
+const {
+  choseRandomPokemonName,
+  choseLetter
+} = gameLogic;
+
 const initialState = {
   name: '',
   choices: [],
@@ -9,15 +14,13 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ACTIONS.CHOSE_POKEMON_NAME:
+      const chosenName = choseRandomPokemonName();
       return {
         ...state,
-        name: [
-          ...state.name,
-          action.payload
-        ]
+        name: chosenName
       };
     case ACTIONS.CHOSE_LETTER:
-      const choicesArray = gameLogic.choseLetter(state.name, action.payload);
+      const choicesArray = choseLetter(state.name, action.payload);
       return {
         ...state,
         choices: choicesArray

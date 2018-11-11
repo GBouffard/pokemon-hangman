@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from "react-redux";
 import {
   CHOSE_LETTER
 } from "../../redux/actions/actions";
 import { alphabetLetters } from "../../constants/game-constants";
-import { connect } from "react-redux";
 import Button from '../atoms/button';
 
 
