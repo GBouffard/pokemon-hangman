@@ -1,5 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from "react-redux";
+
+const mapStateToProps = state => ({
+  lives: state.hearts
+});
 
 const makeLives = (numberOfLives) => {
   const lives = [];
@@ -12,7 +17,7 @@ const makeLives = (numberOfLives) => {
   return lives;
 }
 
-const NumberOfLives = ({ lives }) => {
+const ConnectedNumberOfLives = ({ lives }) => {
   return (
     <div className="App__lives">
       {makeLives(lives)}
@@ -20,8 +25,10 @@ const NumberOfLives = ({ lives }) => {
   );
 };
 
-export default NumberOfLives;
+const NumberOfLives = connect(mapStateToProps)(ConnectedNumberOfLives);
 
-NumberOfLives.propTypes = {
+ConnectedNumberOfLives.propTypes = {
   lives: PropTypes.number.isRequired,
 };
+
+export default NumberOfLives;

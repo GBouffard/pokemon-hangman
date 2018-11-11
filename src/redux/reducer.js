@@ -9,6 +9,7 @@ const {
 const initialState = {
   name: '',
   choices: [],
+  hearts: 6
 };
 
 const reducer = (state = initialState, action) => {
@@ -23,7 +24,8 @@ const reducer = (state = initialState, action) => {
       const choicesArray = choseLetter(state.name, action.payload);
       return {
         ...state,
-        choices: choicesArray
+        choices: choicesArray,
+        hearts: gameLogic.lives
       };
     default:
       return state;

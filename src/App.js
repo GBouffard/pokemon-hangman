@@ -15,8 +15,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <GameLogo />
-          <NumberOfLives
-            lives={6} />
+          <NumberOfLives />
           <StatusImage
             status='playing' />
           <NameProgress

@@ -22,7 +22,7 @@ const gameLogic = {
 
   visualProgress: (name) => mappedProgress(name),
 
-  choseRandomPokemonName: () => { console.log('-------'); return _.sample(pokemonList) },
+  choseRandomPokemonName: () => _.sample(pokemonList),
 
   isCorrect: (letter) => gameLogic.choices.push(letter),
 
