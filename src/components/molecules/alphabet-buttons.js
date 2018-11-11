@@ -7,6 +7,9 @@ import {
 import { alphabetLetters } from "../../constants/game-constants";
 import Button from '../atoms/button';
 
+const mapStateToProps = state => ({
+  showAlphabet: state.showAlphabet
+});
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -23,15 +26,21 @@ const ConnectedButtons = ({ onClick }) => alphabetLetters.map(letter => (
 ));
 
 ConnectedButtons.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 const Buttons = connect(null, mapDispatchToProps)(ConnectedButtons);
 
-const AlphabetButtons = () => (
+const ConnectedAlphabetButtons = ({ showAlphabet }) => (
   <div className="App__alphabet-letter-container">
-    <Buttons />
+    {showAlphabet ? <Buttons /> : <div className="App__alphabet-letter-container--empty" />}
   </div>
 );
+
+ConnectedAlphabetButtons.propTypes = {
+  showAlphabet: PropTypes.bool.isRequired
+};
+
+const AlphabetButtons = connect(mapStateToProps)(ConnectedAlphabetButtons);
 
 export default AlphabetButtons;

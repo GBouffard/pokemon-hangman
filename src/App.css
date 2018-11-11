@@ -74,3 +74,7 @@
   width: 500px;
   margin: 25px auto;
 }
+
+.App__alphabet-letter-container--empty {
+  height: 245px;
+}

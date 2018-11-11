@@ -17,7 +17,8 @@ const initialState = {
   choices,
   hearts: lives,
   nameProgress: 'CLICK NEW GAME',
-  imageStatus: 'playing'
+  imageStatus: 'playing',
+  showAlphabet: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -30,24 +31,30 @@ const reducer = (state = initialState, action) => {
       return {
         ...initialState,
         name: chosenName,
-        nameProgress
+        nameProgress,
+        showAlphabet: true
       };
 
     case ACTIONS.CHOSE_LETTER:
       const choicesArray = choseLetter(state.name, action.payload);
       const updateProgress = visualProgress(state.name);
+      const isGameWon = isWon(state.name);
+      const isGameLost = isLost(state.name);
       const newImageStatus = () => {
-        if (isWon(state.name)) return 'won';
-        if (isLost(state.name)) return 'lost';
+        if (isGameWon) return 'won';
+        if (isGameLost) return 'lost';
         return 'playing';
       };
+
+      const showAlphabet = !isGameWon && !isGameLost;
 
       return {
         ...state,
         choices: choicesArray,
         hearts: gameLogic.lives,
         nameProgress: updateProgress,
-        imageStatus: newImageStatus()
+        imageStatus: newImageStatus(),
+        showAlphabet
       };
     default:
       return state;
