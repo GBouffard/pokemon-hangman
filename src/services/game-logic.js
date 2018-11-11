@@ -34,6 +34,7 @@ const gameLogic = {
   choseLetter: (name, letter) => {
     handleDuplicateChoice(gameLogic.choices, letter);
     name.includes(letter) ? gameLogic.isCorrect(letter) : gameLogic.isIncorrect(letter);
+    return gameLogic.choices;
   },
 
   reStart: () => {
