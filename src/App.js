@@ -16,12 +16,10 @@ class App extends Component {
         <div className="App">
           <GameLogo />
           <NumberOfLives />
-          <StatusImage
-            status='playing' />
+          <StatusImage />
           <NameProgress />
           <AlphabetButtons />
-          <NewGameButton
-            onClick={() => { console.log('Will start a new game') }} />
+          <NewGameButton />
         </div>
       </Provider>
     );

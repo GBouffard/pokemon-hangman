@@ -1,15 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from "react-redux";
 import { statusImages } from "../../constants/game-constants";
 
-const StatusImage = ({ status }) =>
+const mapStateToProps = state => ({
+  status: state.imageStatus
+});
+
+const ConnectedStatusImage = ({ status }) =>
   <img
     alt="status"
     className="App__status-image"
     src={`/images/${statusImages[status]}.png`} />;
 
-export default StatusImage;
+const StatusImage = connect(mapStateToProps)(ConnectedStatusImage);
 
-StatusImage.propTypes = {
+ConnectedStatusImage.propTypes = {
   status: PropTypes.string.isRequired
 };
+
+export default StatusImage;
