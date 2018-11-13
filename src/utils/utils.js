@@ -11,4 +11,13 @@ const makeLives = (numberOfLives) => {
   return lives;
 }
 
-export default makeLives;
+const newImageStatus = (isWon, isLost) => {
+  if (isWon) return 'won';
+  if (isLost) return 'lost';
+  return 'playing';
+};
+
+export {
+  makeLives,
+  newImageStatus
+};

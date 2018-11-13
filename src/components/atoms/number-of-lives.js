@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import makeLives from '../../utils/utils';
+import { makeLives } from '../../utils/utils';
 
 const NumberOfLives = ({ lives }) => {
   return (

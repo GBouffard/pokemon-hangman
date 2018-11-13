@@ -1,5 +1,6 @@
 import ACTIONS from "../constants/action-types";
 import gameLogic from "../services/game-logic";
+import { newImageStatus } from '../../src/utils/utils'
 
 const {
   lives,
@@ -40,12 +41,6 @@ const reducer = (state = initialState, action) => {
       const isGameWon = isWon(state.name);
       const isGameLost = isLost(state.name);
       const updateProgress = isGameLost ? state.name : visualProgress(state.name);
-      const newImageStatus = () => {
-        if (isGameWon) return 'won';
-        if (isGameLost) return 'lost';
-        return 'playing';
-      };
-
       const showAlphabet = !isGameWon && !isGameLost;
 
       return {
@@ -53,7 +48,7 @@ const reducer = (state = initialState, action) => {
         choices: choicesArray,
         hearts: gameLogic.lives,
         nameProgress: updateProgress,
-        imageStatus: newImageStatus(),
+        imageStatus: newImageStatus(isGameWon, isGameLost),
         showAlphabet
       };
     default:
