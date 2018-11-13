@@ -19,7 +19,7 @@ const initialState = {
   hearts: lives,
   nameProgress: 'CLICK NEW GAME',
   imageStatus: 'playing',
-  showAlphabet: false
+  isPlaying: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -33,7 +33,7 @@ const reducer = (state = initialState, action) => {
         ...initialState,
         name: chosenName,
         nameProgress,
-        showAlphabet: true
+        isPlaying: true
       };
 
     case ACTIONS.CHOSE_LETTER:
@@ -41,7 +41,7 @@ const reducer = (state = initialState, action) => {
       const isGameWon = isWon(state.name);
       const isGameLost = isLost(state.name);
       const updateProgress = isGameLost ? state.name : visualProgress(state.name);
-      const showAlphabet = !isGameWon && !isGameLost;
+      const isPlaying = !isGameWon && !isGameLost;
 
       return {
         ...state,
@@ -49,7 +49,7 @@ const reducer = (state = initialState, action) => {
         hearts: gameLogic.lives,
         nameProgress: updateProgress,
         imageStatus: newImageStatus(isGameWon, isGameLost),
-        showAlphabet
+        isPlaying
       };
     default:
       return state;

@@ -4,10 +4,12 @@ import {
   CHOSE_POKEMON_NAME
 } from "../../redux/actions/actions";
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onClick: name => dispatch(CHOSE_POKEMON_NAME(name))
-  };
-};
+const mapStateToProps = state => ({
+  isPlaying: state.isPlaying
+});
 
-export default connect(null, mapDispatchToProps)(NewGameButton);
+const mapDispatchToProps = dispatch => ({
+  onClick: name => dispatch(CHOSE_POKEMON_NAME(name))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewGameButton);
