@@ -24,16 +24,14 @@ const gameLogic = {
 
   choseRandomPokemonName: () => _.sample(pokemonList),
 
-  isCorrect: (letter) => gameLogic.choices.push(letter),
-
-  isIncorrect: (letter) => {
-    gameLogic.choices.push(letter);
+  removeLife: () => {
     gameLogic.lives--;
   },
 
   choseLetter: (name, letter) => {
     handleDuplicateChoice(gameLogic.choices, letter);
-    name.includes(letter) ? gameLogic.isCorrect(letter) : gameLogic.isIncorrect(letter);
+    gameLogic.choices.push(letter);
+    if (!name.includes(letter)) { gameLogic.removeLife() };
     return gameLogic.choices;
   },
 

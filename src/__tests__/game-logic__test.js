@@ -30,19 +30,19 @@ describe("Game logic - ", () => {
   });
 
   describe("During a game - ", () => {
+    let removeLife;
     beforeAll(() => {
       chosenName = 'GUILLAUMECHU';
+      removeLife = jest.spyOn(gameLogic, 'removeLife');
     });
 
     describe("On a correct letter selection - ", () => {
-      let isCorrectSpy;
       beforeAll(() => {
-        isCorrectSpy = jest.spyOn(gameLogic, 'isCorrect');
         gameLogic.choseLetter(chosenName, 'L');
       });
 
       it("Should know that the chosen letter is correct", () => {
-        expect(isCorrectSpy).toHaveBeenCalled();
+        expect(removeLife).not.toHaveBeenCalled();
       });
 
       it("Should not update the number of lives left", () => {
@@ -59,14 +59,12 @@ describe("Game logic - ", () => {
     });
 
     describe("On an incorrect letter selection - ", () => {
-      let isIncorrectSpy;
       beforeAll(() => {
-        isIncorrectSpy = jest.spyOn(gameLogic, 'isIncorrect');
         gameLogic.choseLetter(chosenName, 'Z');
       });
 
       it("Should know that the chosen letter is incorrect", () => {
-        expect(isIncorrectSpy).toHaveBeenCalled();
+        expect(removeLife).toHaveBeenCalled();
       });
 
       it("Should update the number of lives left by removing one", () => {
