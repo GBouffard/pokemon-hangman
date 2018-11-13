@@ -1,6 +1,6 @@
 import ACTIONS from "../constants/action-types";
 import gameLogic from "../services/game-logic";
-import { newImageStatus } from '../../src/utils/utils'
+import { updateImageStatus } from '../../src/utils/utils'
 
 const {
   lives,
@@ -48,7 +48,7 @@ const reducer = (state = initialState, action) => {
         choices: choicesArray,
         hearts: gameLogic.lives,
         nameProgress: updateProgress,
-        imageStatus: newImageStatus(isGameWon, isGameLost),
+        imageStatus: updateImageStatus(isGameWon, isGameLost),
         isPlaying
       };
     default:

@@ -184,14 +184,19 @@ const alphabetLetters = [
   'Z'
 ];
 
-const statusImages = {
-  playing: 'gottaCatchEmAll',
-  won: 'happy-pikachu',
-  lost: 'sad-pikachu'
+const baseUrl = process.env.PUBLIC_URL;
+
+const images = {
+  logo: `${baseUrl}/images/app-logo.png`,
+  background: `${baseUrl}/images/background.png`,
+  heart: `${baseUrl}/images/heart.png`,
+  playing: `${baseUrl}/images/gottaCatchEmAll.png`,
+  won: `${baseUrl}/images/happy-pikachu.png`,
+  lost: `${baseUrl}/images/sad-pikachu.png`
 };
 
 export {
   pokemonList,
   alphabetLetters,
-  statusImages
+  images
 };
