@@ -1,21 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from "react-redux";
 
-const mapStateToProps = state => ({
-  progress: state.nameProgress
-});
-
-const ConnectedNameProgress = ({ progress }) => (
+const NameProgress = ({ progress }) => (
   <div
     className="App__name-progress">
     {progress}
   </div>
 );
 
-const NameProgress = connect(mapStateToProps)(ConnectedNameProgress);
-
-ConnectedNameProgress.propTypes = {
+NameProgress.propTypes = {
   progress: PropTypes.string.isRequired,
 };
 
