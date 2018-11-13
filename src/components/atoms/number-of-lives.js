@@ -1,16 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const makeLives = (numberOfLives) => {
-  const lives = [];
-  for (let i = 0; i < numberOfLives; i++) {
-    lives.push(
-      <span key={i}>
-        <img src="images/heart.png" alt={`life-${i + 1}`} />
-      </span>);
-  }
-  return lives;
-}
+import makeLives from '../../utils/utils';
 
 const NumberOfLives = ({ lives }) => {
   return (
