@@ -42,7 +42,7 @@ Desktop preview:
 Tests preview:
 ----
 (still to come)
-![](public/images/Tests_screenshot1.png)
+![](public/images/Tests_screenshot.png)
 
 How to run it:
 ----
