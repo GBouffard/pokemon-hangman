@@ -59,12 +59,24 @@
   border-radius: 50px;
   font-size: 25px;
   font-weight: bold;
+  margin: 0 auto;
   background-image: radial-gradient(lightcyan, lightblue, deepskyblue);
   border: 3px solid black;
 }
 
 .App__alphabet-letter-button:hover {
   background-image: radial-gradient(white, lightgoldenrodyellow, yellow);
+}
+
+.App__alphabet-letter-hidden-button {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  margin: auto auto;
+  text-align: center;
+  line-height: 50px;
+  opacity: 0.2;
 }
 
 .App__alphabet-letter-container {
