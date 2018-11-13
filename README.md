@@ -27,6 +27,7 @@ Technologies used:
 - CSS
 - Jest
 - png images
+- Github pages
 
 Desktop preview:
 ----
@@ -55,6 +56,11 @@ npm install
 npm test
 npm start
 ```
+
+Deployment link (Github Pages):
+----
+[Guillaume's Pokemon Hangman](https://gbouffard.github.io/pokemon-hangman/)
+
 
 Methodology:
 ----
