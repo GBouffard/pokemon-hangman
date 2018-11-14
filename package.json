@@ -13,6 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "testcafe": "testcafe chrome ./src/functional-tests/",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -27,9 +28,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "eslint-plugin-testcafe": "^0.2.1",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react-redux": "^5.1.1",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "testcafe": "^0.23.2"
   }
 }
