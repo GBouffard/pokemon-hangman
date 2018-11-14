@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/pokemon-hangman/static/js/runtime~main.01ae1c39.js"
   },
   {
-    "revision": "77d24809114cced6ba22",
-    "url": "/pokemon-hangman/static/js/main.77d24809.chunk.js"
+    "revision": "a4f4d60a0493f85ffc85",
+    "url": "/pokemon-hangman/static/js/main.a4f4d60a.chunk.js"
   },
   {
     "revision": "a766783f2b2751caf8cf",
     "url": "/pokemon-hangman/static/js/1.a766783f.chunk.js"
   },
   {
-    "revision": "77d24809114cced6ba22",
-    "url": "/pokemon-hangman/static/css/main.63d766b4.chunk.css"
+    "revision": "a4f4d60a0493f85ffc85",
+    "url": "/pokemon-hangman/static/css/main.af55fc0d.chunk.css"
   },
   {
-    "revision": "74f2d8f3953b11823a66dc50728cac43",
+    "revision": "181432d9b56c2d5575543d51088f71ed",
     "url": "/pokemon-hangman/index.html"
   }
 ];
