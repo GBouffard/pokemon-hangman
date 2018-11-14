@@ -31,7 +31,6 @@ Technologies used:
 
 Desktop preview:
 ----
-(still to come)
 ![](public/images/Screenshot1.png)
 
 ![](public/images/Screenshot2.png)
@@ -42,7 +41,6 @@ Desktop preview:
 
 Tests preview:
 ----
-(still to come)
 ![](public/images/Tests_screenshot.png)
 
 How to run it:
@@ -68,3 +66,4 @@ Methodology:
 - I started with unit logic tests and based the game logic on how it is supposed to work. It was suggested not to worry about test but I see unit testing as a very important part of a project; it's an absolute guarantee that the logic of the app does what it's supposed to do.
 - I then started creating the user interface through React and the code is gearing towards re-usability and possible extensions.
 - I finally integrated the whole logic and components with the state through Redux and React-redux.
+- I deployed using Github pages
