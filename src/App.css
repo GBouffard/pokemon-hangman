@@ -86,6 +86,6 @@
   margin: 25px auto;
 }
 
-.App__alphabet-letter-container--empty {
-  height: 245px;
+.App__alphabet-letter-container--display-none {
+  display: none;
 }

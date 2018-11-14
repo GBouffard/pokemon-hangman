@@ -4,7 +4,7 @@ import Buttons from './buttons-container';
 
 const AlphabetButtons = ({ isPlaying }) => (
   <div className="App__alphabet-letter-container">
-    {isPlaying ? <Buttons /> : <div className="App__alphabet-letter-container--empty" />}
+    {isPlaying ? <Buttons /> : <div className="App__alphabet-letter-container--display-none" />}
   </div>
 );
 
