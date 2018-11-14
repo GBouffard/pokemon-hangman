@@ -25,7 +25,9 @@ Technologies used:
 - classNames
 - BEM
 - CSS
+- React-media
 - Jest
+- Test cafe
 - png images
 - Github pages
 
@@ -41,7 +43,19 @@ Desktop preview:
 
 Tests preview:
 ----
+- Unit tests:
+```
+npm test
+```
+
 ![](public/images/Tests_screenshot.png)
+
+- Functional tests:
+```
+npm run testcafe
+```
+(image-to-come)
+![](public/images/Functional_tests_screenshot.png)
 
 How to run it:
 ----
@@ -51,7 +65,6 @@ git clone git@github.com:GBouffard/pokemon-hangman.git
 cd pokemon-hangman
 
 npm install
-npm test
 npm start
 ```
 
@@ -66,4 +79,5 @@ Methodology:
 - I started with unit logic tests and based the game logic on how it is supposed to work. It was suggested not to worry about test but I see unit testing as a very important part of a project; it's an absolute guarantee that the logic of the app does what it's supposed to do.
 - I then started creating the user interface through React and the code is gearing towards re-usability and possible extensions.
 - I finally integrated the whole logic and components with the state through Redux and React-redux.
-- I deployed using Github pages
+- I deployed using Github pages.
+- I then added extra features; functional tests and responsive design.

@@ -14,10 +14,27 @@
   left: 0;
 }
 
+.App__logo--mobile {
+  width: 120px;
+}
+
+.App__status-image--mobile {
+  width: 150px;
+}
+
+.App__heart--mobile {
+  width: 20px;
+  height: 20px;
+}
+
 .App__lives {
   position: absolute;
   margin: 15px;
   right: 0;
+}
+
+.App__lives--mobile {
+  margin: 10px;
 }
 
 .App__name-progress {
@@ -29,6 +46,12 @@
   width: 500px;
   border: 5px solid darkblue;
   border-radius: 15px;
+}
+
+.App__name-progress--mobile {
+  padding: 10px;
+  width: 300px;
+  font-size: 25px;
 }
 
 .App__new-game-button {
@@ -50,6 +73,10 @@
   background: lightcyan;
   background: linear-gradient(lightcyan 0%, darkblue 100%);
   border: 3px solid darkblue;
+}
+
+.App__new-game-button--mobile {
+  width: 125px;
 }
 
 .App__alphabet-letter-button {
