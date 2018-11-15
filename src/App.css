@@ -15,16 +15,16 @@
 }
 
 .App__logo--mobile {
-  width: 120px;
+  width: 80px;
 }
 
 .App__status-image--mobile {
-  width: 150px;
+  width: 120px;
 }
 
 .App__heart--mobile {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .App__lives {
@@ -38,9 +38,9 @@
 }
 
 .App__name-progress {
-  font-family: cursive;
   background: lightblue;
   font-size: 50px;
+  letter-spacing: 6px;
   padding: 10px 30px;
   margin: 0 auto 25px;
   width: 500px;
@@ -52,6 +52,8 @@
   padding: 10px;
   width: 300px;
   font-size: 25px;
+  margin-bottom: 0;
+  letter-spacing: 3px;
 }
 
 .App__new-game-button {
@@ -63,7 +65,6 @@
   background: linear-gradient(lightblue 0%, blue 100%);
   border: 3px solid blue;
   border-radius: 50px;
-  font-family: monospace;
   font-size: 36px;
   font-weight: bold;
 }
@@ -76,7 +77,9 @@
 }
 
 .App__new-game-button--mobile {
-  width: 125px;
+  width: 175px;
+  margin: 0 auto;
+  font-size: 24px;
 }
 
 .App__alphabet-letter-button {
@@ -94,6 +97,14 @@
   background-image: radial-gradient(white, lightgoldenrodyellow, yellow);
 }
 
+.App__alphabet-letter-button--mobile {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  border-width: 2px;
+}
+
 .App__alphabet-letter-hidden-button {
   height: 50px;
   width: 50px;
@@ -105,12 +116,27 @@
   opacity: 0.2;
 }
 
+.App__alphabet-letter-hidden-button--mobile {
+  height: 30px;
+  width: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: auto auto;
+  text-align: center;
+  line-height: 30px;
+  opacity: 0.2;
+}
+
 .App__alphabet-letter-container {
   display: grid;
   grid-template-columns: repeat(7, auto);
   grid-gap: 15px;
   width: 500px;
   margin: 25px auto;
+}
+
+.App__alphabet-letter-container--mobile {
+  width: 300px;
 }
 
 .App__alphabet-letter-container--display-none {

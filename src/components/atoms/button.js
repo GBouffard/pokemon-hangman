@@ -2,7 +2,7 @@ import React from 'react';
 import Media from 'react-media';
 import PropTypes from 'prop-types';
 
-const Button = (props) => (
+const Button = (props) =>
   <Media query="(max-width: 640px)">
     {isMobile =>
       <button
@@ -11,7 +11,7 @@ const Button = (props) => (
         {props.children}
       </button>
     }
-  </Media>);
+  </Media>;
 
 export default Button;
 
