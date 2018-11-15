@@ -1,13 +1,13 @@
 {
   "main.css": "/pokemon-hangman/static/css/main.55709b98.chunk.css",
-  "main.js": "/pokemon-hangman/static/js/main.e501a9ec.chunk.js",
-  "main.js.map": "/pokemon-hangman/static/js/main.e501a9ec.chunk.js.map",
+  "main.js": "/pokemon-hangman/static/js/main.44bf63f6.chunk.js",
+  "main.js.map": "/pokemon-hangman/static/js/main.44bf63f6.chunk.js.map",
   "static/js/1.51159a69.chunk.js": "/pokemon-hangman/static/js/1.51159a69.chunk.js",
   "static/js/1.51159a69.chunk.js.map": "/pokemon-hangman/static/js/1.51159a69.chunk.js.map",
   "runtime~main.js": "/pokemon-hangman/static/js/runtime~main.01ae1c39.js",
   "runtime~main.js.map": "/pokemon-hangman/static/js/runtime~main.01ae1c39.js.map",
   "static/css/main.55709b98.chunk.css.map": "/pokemon-hangman/static/css/main.55709b98.chunk.css.map",
   "index.html": "/pokemon-hangman/index.html",
-  "precache-manifest.61de7159ca082e74c41d7332f749d12f.js": "/pokemon-hangman/precache-manifest.61de7159ca082e74c41d7332f749d12f.js",
+  "precache-manifest.a276cc18b5fe330d526b1aec6af9dd3f.js": "/pokemon-hangman/precache-manifest.a276cc18b5fe330d526b1aec6af9dd3f.js",
   "service-worker.js": "/pokemon-hangman/service-worker.js"
 }
