@@ -31,8 +31,9 @@ Technologies used:
 - png images
 - Github pages
 
-Desktop preview:
+Previews:
 ----
+Desktop:
 ![](public/images/Screenshot1.png)
 
 ![](public/images/Screenshot2.png)
@@ -40,6 +41,9 @@ Desktop preview:
 ![](public/images/Screenshot3.png)
 
 ![](public/images/Screenshot4.png)
+
+Mobile:
+![](public/images/Screenshot5.png)
 
 Tests preview:
 ----

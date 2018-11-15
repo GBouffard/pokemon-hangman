@@ -10,7 +10,7 @@ const makeLives = (numberOfLives) => {
         {isMobile =>
           <span key={i}>
             <img src={images.heart} alt={`life-${i + 1}`}
-              className={isMobile ? 'App__heart--mobile' : null} />
+              className={`App__heart ${isMobile ? 'App__heart--mobile' : null}`} />
           </span>
         }
       </Media>);
