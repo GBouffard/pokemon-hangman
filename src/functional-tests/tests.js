@@ -6,6 +6,7 @@ const gameLogo = Selector('.App__logo');
 const numberOfLives = Selector('.App__lives');
 const nameProgress = Selector('.App__name-progress');
 const aLetterButton = Selector('.App__alphabet-letter-button').nth(0);
+const aHiddenLetterButton = Selector('.App__alphabet-letter-hidden-button').nth(0);
 const bLetterButton = Selector('.App__alphabet-letter-button').nth(1);
 const newGameButton = Selector('.App__new-game-button');
 
@@ -28,14 +29,25 @@ test('Does not show the alphabet buttons', async (t) => {
 });
 
 fixture('When playing - ')
-  .page('https://gbouffard.github.io/pokemon-hangman/');
+  .page('https://gbouffard.github.io/pokemon-hangman/')
+  .beforeEach(async t => {
+    await t
+      .click(newGameButton);
+  });
 
-test('Starting a game update the views with the expected components', async (t) => {
-  await t
-    .click(newGameButton);
-
+test('Starting a game updates the views with the expected components', async (t) => {
   await t
     .expect(app.innerText).notContains('CLICK NEW GAME')
+    .expect(app.innerText).contains('_')
     .expect(aLetterButton.count).eql(1)
+    .expect(aHiddenLetterButton.count).eql(0)
     .expect(bLetterButton.exists).ok();
+});
+
+test('Clicking a letter removes its button from the game', async (t) => {
+  await t
+    .click(aLetterButton);
+
+  await t
+    .expect(aHiddenLetterButton.count).eql(1);
 });
