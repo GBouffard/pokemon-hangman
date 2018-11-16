@@ -2,6 +2,7 @@
 ===
 
 Main functionalities:
+- A new game cannot be started before a game is completed.
 - The game chooses a ramdom name within the list of first generation pokemon names.
 - The player has 6 lives at initial state and will select letters to play.
 - If a correct letter is guessed, it shows within the visual progress and no life is lost.
@@ -9,7 +10,6 @@ Main functionalities:
 - The game logic prohibits a player from selecting a letter twice.
 - If the playear loses his 6 lives the game is lost.
 - if the player guesses the Pokemon name before losing all his lives, the game is won.
-- A new game can be started at anytime.
 
 Technologies used:
 ----
@@ -33,7 +33,8 @@ Technologies used:
 
 Previews:
 ----
-Desktop:
+- Desktop:
+
 ![](public/images/Screenshot1.png)
 
 ![](public/images/Screenshot2.png)
@@ -42,7 +43,8 @@ Desktop:
 
 ![](public/images/Screenshot4.png)
 
-Mobile:
+- Mobile:
+
 ![](public/images/Screenshot5.png)
 
 Tests preview:
