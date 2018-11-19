@@ -6,9 +6,10 @@ const gameLogo = Selector('.App__logo');
 const numberOfLives = Selector('.App__lives');
 const heart = Selector('.App__heart');
 const nameProgress = Selector('.App__name-progress');
-const aLetterButton = Selector('.App__alphabet-letter-button').nth(0);
+const letterButton = Selector('.App__alphabet-letter-button');
+const aLetterButton = letterButton.nth(0);
 const aHiddenLetterButton = Selector('.App__alphabet-letter-hidden-button').nth(0);
-const bLetterButton = Selector('.App__alphabet-letter-button').nth(1);
+const bLetterButton = letterButton.nth(1);
 const newGameButton = Selector('.App__new-game-button');
 let nameProgressInitial;
 
@@ -47,7 +48,8 @@ test('Starting a game updates the views with the expected components', async (t)
     .expect(heart.count).eql(6)
     .expect(aLetterButton.count).eql(1)
     .expect(aHiddenLetterButton.count).eql(0)
-    .expect(bLetterButton.exists).ok();
+    .expect(bLetterButton.exists).ok()
+    .expect(letterButton.count).eql(26);
 });
 
 test('Clicking a letter removes its button from the game', async (t) => {
@@ -56,7 +58,7 @@ test('Clicking a letter removes its button from the game', async (t) => {
     .expect(aHiddenLetterButton.count).eql(1);
 });
 
-test('Clicking a letter either remove a life or ad a letter to the name progress', async (t) => {
+test('Clicking a letter either remove a life or add a letter to the name progress', async (t) => {
   await t
     .click(bLetterButton);
   await t
