@@ -1,0 +1,11 @@
+.App__lives {
+  position: absolute;
+  margin: 15px;
+  right: 0;
+}
+
+.App__lives--mobile {
+  margin: 10px;
+}
+
+/*# sourceMappingURL=lives.css.map */

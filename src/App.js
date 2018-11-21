@@ -8,7 +8,6 @@ import NumberOfLives from './components/atoms/number-of-lives-container';
 import NameProgress from './components/atoms/name-progress-container';
 import AlphabetButtons from './components/molecules/alphabet-buttons-container';
 import NewGameButton from './components/atoms/new-game-button-container';
-import "./App.css";
 
 class App extends Component {
   render() {

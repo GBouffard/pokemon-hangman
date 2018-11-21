@@ -1,0 +1,20 @@
+.App__logo {
+  position: absolute;
+  margin: 15px;
+  left: 0;
+}
+
+.App__logo--mobile {
+  width: 80px;
+}
+
+.App__status-image--mobile {
+  width: 120px;
+}
+
+.App__heart--mobile {
+  width: 18px;
+  height: 18px;
+}
+
+/*# sourceMappingURL=images.css.map */

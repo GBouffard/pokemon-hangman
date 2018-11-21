@@ -1,0 +1,15 @@
+.App__alphabet-letter-container {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 15px;
+  width: 500px;
+  margin: 25px auto;
+}
+
+.App__alphabet-letter-container--mobile {
+  width: 300px;
+}
+
+.App__alphabet-letter-container--display-none {
+  display: none;
+}
