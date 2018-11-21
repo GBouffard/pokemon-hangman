@@ -24,17 +24,19 @@
   }
 }
 
+@mixin createButton($size) {
+  width: $size;
+  height: $size;
+  border-radius: $size;
+}
+
 .alphabet-letter-button {
-  width: $letterButtonSize;
-  height: $letterButtonSize;
-  border-radius: $letterButtonSize;
+  @include createButton($letterButtonSize);
   font-size: $letterButtonTextSize;
   font-weight: bold;
 
   &--mobile {
-    width: $letterButtonMobileSize;
-    height: $letterButtonMobileSize;
-    border-radius: $letterButtonMobileSize;
+    @include createButton($letterButtonMobileSize);
     font-size: $letterButtonMobileTextSize;
   }
 }
