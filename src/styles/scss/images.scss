@@ -1,11 +1,11 @@
 .App__logo {
   position: absolute;
-  margin: 15px;
   left: 0;
-}
+  margin: 15px;
 
-.App__logo--mobile {
-  width: 80px;
+  &--mobile {
+    width: 80px;
+  }
 }
 
 .App__status-image--mobile {

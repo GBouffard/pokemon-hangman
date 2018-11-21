@@ -1,70 +1,69 @@
+@import 'variables';
+
 .App__new-game-button {
   width: 250px;
   margin: 10px auto;
   padding: 8px 18px;
-  color: lightgoldenrodyellow;
-  background: lightblue;
   background: linear-gradient(lightblue 0%, blue 100%);
   border: 3px solid blue;
   border-radius: 50px;
   font-size: 36px;
   font-weight: bold;
+  color: lightgoldenrodyellow;
+
+  &--mobile {
+    width: 175px;
+    margin: 0 auto;
+    font-size: 24px;
+  }
+
+  &:hover {
+    background: linear-gradient(lightcyan 0%, darkblue 100%);
+    border: 3px solid darkblue;
+    color: yellow;
+  }
 }
 
-.App__new-game-button:hover {
-  color: yellow;
-  background: lightcyan;
-  background: linear-gradient(lightcyan 0%, darkblue 100%);
-  border: 3px solid darkblue;
-}
+.alphabet-letter-button {
+  width: $letterButtonSize;
+  height: $letterButtonSize;
+  border-radius: $letterButtonSize;
+  font-size: $letterButtonTextSize;
+  font-weight: bold;
 
-.App__new-game-button--mobile {
-  width: 175px;
-  margin: 0 auto;
-  font-size: 24px;
+  &--mobile {
+    width: $letterButtonMobileSize;
+    height: $letterButtonMobileSize;
+    border-radius: $letterButtonMobileSize;
+    font-size: $letterButtonMobileTextSize;
+  }
 }
 
 .App__alphabet-letter-button {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  font-size: 25px;
-  font-weight: bold;
+  @extend .alphabet-letter-button;
   margin: 0 auto;
   background-image: radial-gradient(lightcyan, lightblue, deepskyblue);
   border: 3px solid black;
-}
 
-.App__alphabet-letter-button:hover {
-  background-image: radial-gradient(white, lightgoldenrodyellow, yellow);
-}
+  &--mobile {
+    @extend .alphabet-letter-button--mobile;
+    border-width: 2px;
+  }
 
-.App__alphabet-letter-button--mobile {
-  height: 30px;
-  width: 30px;
-  border-radius: 30px;
-  font-size: 16px;
-  border-width: 2px;
+  &:hover {
+    background-image: radial-gradient(white, lightgoldenrodyellow, yellow);
+  }
 }
 
 .App__alphabet-letter-hidden-button {
-  height: 50px;
-  width: 50px;
-  font-size: 25px;
-  font-weight: bold;
+  @extend .alphabet-letter-button;
   margin: auto auto;
-  text-align: center;
-  line-height: 50px;
   opacity: 0.2;
-}
+  line-height: $letterButtonSize;
+  text-align: center;
 
-.App__alphabet-letter-hidden-button--mobile {
-  height: 30px;
-  width: 30px;
-  font-size: 16px;
-  font-weight: bold;
-  margin: auto auto;
-  text-align: center;
-  line-height: 30px;
-  opacity: 0.2;
+  &--mobile {
+    @extend .alphabet-letter-button--mobile;
+    line-height: $letterButtonMobileSize;
+  }
 }

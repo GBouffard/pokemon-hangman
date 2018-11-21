@@ -2,71 +2,58 @@
   width: 250px;
   margin: 10px auto;
   padding: 8px 18px;
-  color: lightgoldenrodyellow;
-  background: lightblue;
   background: linear-gradient(lightblue 0%, blue 100%);
   border: 3px solid blue;
   border-radius: 50px;
   font-size: 36px;
   font-weight: bold;
+  color: lightgoldenrodyellow;
 }
-
-.App__new-game-button:hover {
-  color: yellow;
-  background: lightcyan;
-  background: linear-gradient(lightcyan 0%, darkblue 100%);
-  border: 3px solid darkblue;
-}
-
 .App__new-game-button--mobile {
   width: 175px;
   margin: 0 auto;
   font-size: 24px;
 }
+.App__new-game-button:hover {
+  background: linear-gradient(lightcyan 0%, darkblue 100%);
+  border: 3px solid darkblue;
+  color: yellow;
+}
 
-.App__alphabet-letter-button {
-  height: 50px;
+.alphabet-letter-button, .App__alphabet-letter-hidden-button, .App__alphabet-letter-button {
   width: 50px;
+  height: 50px;
   border-radius: 50px;
   font-size: 25px;
   font-weight: bold;
+}
+.alphabet-letter-button--mobile, .App__alphabet-letter-hidden-button--mobile, .App__alphabet-letter-button--mobile {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.App__alphabet-letter-button {
   margin: 0 auto;
   background-image: radial-gradient(lightcyan, lightblue, deepskyblue);
   border: 3px solid black;
 }
-
+.App__alphabet-letter-button--mobile {
+  border-width: 2px;
+}
 .App__alphabet-letter-button:hover {
   background-image: radial-gradient(white, lightgoldenrodyellow, yellow);
 }
 
-.App__alphabet-letter-button--mobile {
-  height: 30px;
-  width: 30px;
-  border-radius: 30px;
-  font-size: 16px;
-  border-width: 2px;
-}
-
 .App__alphabet-letter-hidden-button {
-  height: 50px;
-  width: 50px;
-  font-size: 25px;
-  font-weight: bold;
   margin: auto auto;
-  text-align: center;
+  opacity: 0.2;
   line-height: 50px;
-  opacity: 0.2;
-}
-
-.App__alphabet-letter-hidden-button--mobile {
-  height: 30px;
-  width: 30px;
-  font-size: 16px;
-  font-weight: bold;
-  margin: auto auto;
   text-align: center;
+}
+.App__alphabet-letter-hidden-button--mobile {
   line-height: 30px;
-  opacity: 0.2;
 }
 
 /*# sourceMappingURL=buttons.css.map */

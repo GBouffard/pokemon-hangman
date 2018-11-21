@@ -22,10 +22,10 @@ Technologies used:
 - Redux
 - React-redux
 - lodash
+- React-media
 - classNames
 - BEM
-- CSS
-- React-media
+- sass (CSS)
 - Jest
 - Test cafe
 - png images
@@ -86,4 +86,4 @@ Methodology:
 - I then started creating the user interface through React and the code is gearing towards re-usability and possible extensions.
 - I finally integrated the whole logic and components with the state through Redux and React-redux.
 - I deployed using Github pages.
-- I then added extra features; functional tests and responsive design.
+- I then added extra features; functional tests, responsive design and sass compiling to css.
